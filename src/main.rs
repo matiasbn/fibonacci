@@ -11,15 +11,13 @@ fn fibonacci(value: u32) -> String {
             val.push(first + second);
         }
     }
-    return loop {
-        let mut string = String::new();
-        for member in val.iter() {
-            let member_string = format!("{} ", member);
-            string.push_str(&member_string);
-        }
-        string.pop();
-        break string;
-    };
+    let mut string = String::new();
+    for member in val.iter() {
+        let member_string = format!("{} ", member);
+        string.push_str(&member_string);
+    }
+    string.pop();
+    string
 }
 
 fn main() {
